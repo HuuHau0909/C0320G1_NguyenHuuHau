@@ -1,0 +1,8 @@
+Begin
+ N s? ng?u nhiên t? 0 d?n 9
+ Nh?p M
+ If (M==N)
+ Display"D? doán dúng"
+Esle
+ Display"D? doán sai"
+End

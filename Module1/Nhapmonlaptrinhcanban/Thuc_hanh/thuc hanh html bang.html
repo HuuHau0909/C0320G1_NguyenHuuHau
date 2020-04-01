@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành bảng</title>
+</head>
+<body>
+    <form>
+        First Name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname">
+    </form>
+    <form>
+        User Name:<br>
+        <input type="text" name="usename"> <br>
+        User Password:<br>
+        <input type="password" name="psw">
+    </form>
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <form>
+        <input type="radio" name="gender" value="Male" checked>Male<br>
+        <input type="radio" name="gender" value="Female">Female<br>
+        <input type="radio" name="gender" value="Other">Other
+    </form>
+    <form>
+        <input type="checkbox" name="vehicle1" value="bike">I have a bike<br>
+        <input type="checkbox" name="vehicle2" value="Car"> I have a Car
+    </form>
+    <input type="button" onclick="alert('Hello world!')" value="click me!">
+</body>
+</html>
