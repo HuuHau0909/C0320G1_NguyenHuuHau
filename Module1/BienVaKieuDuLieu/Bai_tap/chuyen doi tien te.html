@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+Amount: <input type="text" id="amount">
+From Currency: <select id="fromC">
+    <option>VND</option>
+    <option>USD</option>
+</select>
+To Currency: <select id="toC">
+    <option>VND</option>
+    <option>USD</option>
+</select>
+<button type="button" onclick="chuyenDoi()">Convert</button>
+<p id="doiTien"></p>
+<script>
+    let amount = document.getElementById("amount");
+    let fromC = document.getElementById("fromC");
+    let toC = document.getElementById("toC");
+    function chuyenDoi() {
+    let doiTien;
+    if (fromC.value === "USD" && toC.value ==="VND") {
+        doiTien = amount.value*23000;
+    } else if (fromC.value === "VND" && toC.value ==="USD") {
+        doiTien = amount.value/23000
+    } else {
+        doiTien = "Yêu cầu nhập tiền tệ cần đổi"
+    }
+    document.getElementById("doiTien").innerText = doiTien;
+    }
+</script>
+</body>
+</html>

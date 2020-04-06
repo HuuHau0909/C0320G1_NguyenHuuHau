@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS1</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let adress;
+    let typeCustomer;
+    let discount;
+    let quantityInclued;
+    let renDays;
+    let typeService;
+    let typeRoom;
+    let totalpay;
+
+    name = prompt("Input Name: ");
+    cmnd = prompt("Input cmnd: ");
+    birthday = prompt("Input birthday: ");
+    email = prompt("Input email: ");
+    adress = prompt("Input adress: ");
+    typeCustomer = prompt("Input type customer: ");
+    discount = prompt("Input discount: ");
+    quantityInclued = prompt("Input quantity inclue: ");
+    renDays = prompt("Input ren Days: ");
+    typeService = prompt("Input type service: ");
+    typeRoom = prompt("Input type room: ");
+    totalpay = 300*renDays*(1-discount/100);
+
+    alert("Name: "+name+" CMND: "+cmnd+ " Birthday: "+birthday+ " Email: "+email+ " Adress: "+adress+ " Type Customer: "+typeCustomer
+        + " Discount: "+discount+ " Quantity Inclue: "+quantityInclued+ " Ren Days: "+renDays+ " Type Service: "+typeService
+        + " Type Room: "+typeRoom+ " Total Pay: "+totalpay);
+
+</script>
+</body>
+</html>

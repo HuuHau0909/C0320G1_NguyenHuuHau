@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Đổi độ C sang độ F</h3>
+Nhập độ C:
+<input type="number" id="doC">
+<button onclick="chuyenDoi()">Đổi</button>
+<p id="doF"></p>
+<script>
+    let doC = document.getElementById("doC");
+    let doF
+    function chuyenDoi() {
+        doF = parseInt(doC.value)*9/5+32;
+        document.getElementById("doF").innerText = doF;
+    }
+
+</script>
+</body>
+</html>

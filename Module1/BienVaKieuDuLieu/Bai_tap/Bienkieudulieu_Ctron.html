@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi hình tròn</title>
+</head>
+<body>
+<h3>Tính chu vi hình tròn</h3>
+Nhập bán kính hình tròn:
+<input type="number" id="banKinh">
+<button onclick="tinhC()";>Tính</button>
+<p id="C"></p>
+<script>
+    function tinhC() {
+let banKinh = document.getElementById("banKinh");
+let C;
+        C = parseInt(banKinh.value)*2*3.14;
+        document.getElementById("C").innerText = C;
+    }
+</script>
+</body>
+</html>

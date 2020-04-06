@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+<h3>Tính diện tích hình tròn</h3>
+Nhập bán kính:
+<input type="number" id="banKinh">
+<button onclick="tinhS()";>Diện tích</button>
+<p id="S"></p>
+<script>
+    function tinhS() {
+        let banKinh = document.getElementById("banKinh");
+        let S
+        S= parseInt(banKinh.value)*parseInt(banKinh.value)*3.14;
+        document.getElementById("S").innerText = S;
+    }
+
+</script>
+</body>
+</html>

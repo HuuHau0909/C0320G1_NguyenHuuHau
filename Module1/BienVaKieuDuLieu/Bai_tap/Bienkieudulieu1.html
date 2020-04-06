@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu 1</title>
+    </head>
+<body>
+<h3>TÍNH ĐIỂM TRUNG BÌNH 3 MÔN</h3>
+<p>Nhập điểm 3 môn <strong>Lý, Hóa, Sinh</strong> vào các ô dưới:</p>
+<form>
+    <strong>Điểm Lý:</strong><br>
+    <input type="number" min="0" id="diemly"><br>
+    <strong>Điểm Hóa:</strong><br>
+    <input type="number" min="0" id="diemhoa"><br>
+    <strong>Điểm Sinh:</strong><br>
+    <input type="number" min="0" id="diemsinh"><br><br>
+    <button type="button" onclick="myFuntion();return false">Tính</button>
+   <ul>
+       <li id="tong">Tổng điểm</li>
+       <li id="diemTB">Điểm trung bình </li>
+   </ul>
+    <script>
+        let diemly=document.getElementById("diemly");
+        let diemhoa=document.getElementById("diemhoa");
+        let diemsinh=document.getElementById("diemsinh");
+        function myFuntion() {
+            let tong;
+            let diemTB;
+            tong = parseInt(diemly.value) + parseInt(diemhoa.value) + parseInt(diemsinh.value);
+            diemTB = (parseInt(diemly.value) + parseInt(diemhoa.value) + parseInt(diemsinh.value)) / 3;
+            document.getElementById("tong").innerText=tong;
+            document.getElementById("diemTB").innerText=diemTB;
+        }
+    </script>
+</form>
+
+</body>
+</html>

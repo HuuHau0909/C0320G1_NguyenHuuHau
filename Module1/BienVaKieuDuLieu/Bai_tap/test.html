@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi tien</title>
+</head>
+<body>
+<br>
+<h3> <label for="amount">Amount:</label> </h3>
+<form>
+    <input type="number" id="amount">;
+</form>
+<h3> <label for="fromCurrency">From Currency:</label> </h3>
+<select id="fromCurrency">
+    <option value="VND">Viet Nam</option>
+    <option value="USD">USA</option>
+    <option value="UERO">UERO</option>
+</select>
+<h3> <labe for="toCurrency">To Currency:</labe> </h3>
+<select id="toCurrency">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+    <option value="UERO">UERO</option>
+</select>
+<h3> <input id="result"> </h3>
+<button type="button" onclick="convert();">Convert</button>
+<script>
+    function convert() {
+        let result ;
+        let amount = document.getElementById("amount");
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        if (fromCurrency === "VND" && toCurrency === "USD") {
+            result = amount.value / 23000;
+        } else if (fromCurrency === "USD" && toCurrency === "VND") {
+            result = amount.value * 23000;
+        } else if (fromCurrency === "VND" && toCurrency === "UERO") {
+            result = amount.value / 26000;
+        } else if (fromCurrency === "UERO" && toCurrency === "VND") {
+            result = amount.value * 26000;
+        } else if (fromCurrency === "UERO" && toCurrency === "USD") {
+            result = amount.value * 1.09702;
+        } else if (fromCurrency === "USD" && toCurrency === "UERO") {
+            result = amount.value / 1.09702;
+        } else {
+            alert("Yeu cau nguoi dung lua chon loai tien");
+        }
+        document.getElementById("result").value = result;
+    }
+</script>
+</body>
+</html>
