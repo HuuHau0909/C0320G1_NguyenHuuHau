@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <strong>Nhập tháng cần kiểm tra:</strong><br><br>
+    <input type="number" id="thang">
+    <button onclick="tinh();return false">Tính số ngày</button>
+    <p id="result"></p>
+    <script>
+        let thang = document.getElementById('thang');
+        let result;
+        function tinh() {
+            switch (parseInt(thang.value)) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    result = "Tháng có 31 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    result = "Tháng có 30 ngày";
+                    break;
+                case 2:
+                    result = "tháng có 28 hoặc 29 ngày";
+                    break;
+                default:
+                    result = "Đây không phải là tháng trong năm";
+            }
+            document.getElementById("result").innerText = result;
+        }
+
+    </script>
+</form>
+</body>
+</html>

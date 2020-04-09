@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../image/anh1.1.jpg" onclick="chuyen(1)" id="anh1"><br>
+<img src="../image/anh1.2.jpg" onclick="chuyen(2)" id="anh2"><br>
+<img src="../image/anh1.3.jpg" onclick="chuyen(3)" id="anh3">
+<script>
+    let anh1 = document.getElementById("anh1");
+    let anh2 = document.getElementById("anh2");
+    let anh3 = document.getElementById("anh3");
+    function chuyen(so) {
+        switch (so) {
+            case 1:
+                if (anh1.getAttribute('src') === "../image/anh1.1.jpg") {
+                    anh1.src = "../image/anh2.1.jpg";
+                } else if (anh1.getAttribute('src') === "../image/anh2.1.jpg") {
+                    anh1.src = "../image/anh3.1.jpg";
+                } else if (anh1.getAttribute('src') === "../image/anh3.1.jpg") {
+                    anh1.src = "../image/anh1.1.jpg";
+                }
+                break;
+            case 2:
+                if (anh2.getAttribute('src') === "../image/anh1.2.jpg") {
+                    anh2.src = "../image/anh2.2.jpg";
+                } else if (anh2.getAttribute('src') === "../image/anh2.2.jpg") {
+                    anh2.src = "../image/anh3.2.jpg";
+                } else if (anh2.getAttribute('src') === "../image/anh3.2.jpg") {
+                    anh2.src = "../image/anh1.2.jpg";
+                }
+                break;
+            case 3:
+                if (anh3.getAttribute('src') === "../image/anh1.3.jpg") {
+                    anh3.src = "../image/anh2.3.jpg";
+                } else if (anh3.getAttribute('src') === "../image/anh2.3.jpg") {
+                    anh3.src = "../image/anh3.3.jpg";
+                } else if (anh3.getAttribute('src') === "../image/anh3.3.jpg") {
+                    anh3.src = "../image/anh1.3.jpg";
+                }
+                break;
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
