@@ -2,9 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let name = 'Hậu';
+    let cmnd = '201801111';
+    let birthday = '9/9/1984';
+    let email = 'huuhau99@gmail.com';
+    let adress = 'Quảng Nam';
+    let typeCustomer = 'Platium';
+    let discount = 10;
+    let quantityInclued = 5;
+    let renDays = 15;
+    let typeService = 'Villa';
+    let typeRoom = 'Vip';
+
+    let chon = parseInt(prompt("1.Hiển thị thông tin khách hàng"+'\n'+
+        '2.Chỉnh sửa thông tin khách hàng' + '\n' +
+        '3.Hiển thị giá sau khi được giảm giá'));
+    switch (chon) {
+        case 1: {
+            alert('Name: ' + name + '\n' +
+                'CMND: ' + cmnd + '\n' +
+                'Birthday: ' + birthday + '\n' +
+                'Email: ' + email + '\n' +
+                'Adress: ' + adress + '\n' +
+                'Type Custommer: ' + typeCustomer + '\n' +
+                'Discount: ' + discount + '\n' +
+                'Quantity Inclued: ' + quantityInclued + '\n' +
+                'Rendays: ' + renDays + '\n' +
+                'Type Service: ' + typeService + '\n' +
+                'Type Room: ' + typeRoom);
+            break;
+        }
+        case 2: {
+            let chinhsua = parseInt(prompt('Nhập mục thông tin cần chỉnh sửa' + '\n\n' +
+                '1.Name: ' + name + '\n' +
+                '2.CMND: ' + cmnd + '\n' +
+                '3.Birthday: ' + birthday + '\n' +
+                '4.Email: ' + email + '\n' +
+                '5.Adress: ' + adress + '\n' +
+                '6.Type Custommer: ' + typeCustomer + '\n' +
+                '7.Discount: ' + discount + '\n' +
+                '8.Quantity Inclued: ' + quantityInclued + '\n' +
+                '9.Rendays: ' + renDays + '\n' +
+                '10.Type Service: ' + typeService + '\n' +
+                '11.Type Room: ' + typeRoom));
+            switch (chinhsua) {
+                case 1: {
+                    name = prompt('Nhập lại tên: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 2: {
+                    cmnd = prompt('Nhập lại CMND: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 3: {
+                    birthday = prompt('Nhập lại Birthday: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 4: {
+                    email = prompt('Nhập lại Email: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 5: {
+                    adress = prompt('Nhập lại Adress: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 6: {
+                    typeCustomer = prompt('Nhập lại Type Custonmer: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 7: {
+                    discount = prompt('Nhập lại Discount: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 8: {
+                    quantityInclued = prompt('Nhập lại Quantity Inclued: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 9: {
+                    renDays = prompt('Nhập lại Rendays: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 10: {
+                    typeService = prompt('Nhập lại Type Service: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                case 11: {
+                    typeRoom = prompt('Nhập lại Type Room: ');
+                    alert('Name: ' + name + '\n' +
+                        'CMND: ' + cmnd + '\n' +
+                        'Birthday: ' + birthday + '\n' +
+                        'Email: ' + email + '\n' +
+                        'Adress: ' + adress + '\n' +
+                        'Type Custommer: ' + typeCustomer + '\n' +
+                        'Discount: ' + discount + '\n' +
+                        'Quantity Inclued: ' + quantityInclued + '\n' +
+                        'Rendays: ' + renDays + '\n' +
+                        'Type Service: ' + typeService + '\n' +
+                        'Type Room: ' + typeRoom);
+                    break;
+                }
+                default: {
+                    alert('Failed')
+                    break;
+                }
+            }
+            }
+            case 3: {
+                let giamgia = 0;
+                if (typeService === 'Villa') {
+                    typeService = 500;
+                } else if (typeService === 'House') {
+                    typeService = 300;
+                } else if (typeService === 'Room')  {
+                    typeService = 100;
+                }
+                if (adress === 'Đà Nẵng') {
+                    giamgia += 20;
+                } else if (adress ==='Huế') {
+                    giamgia += 10;
+                } else if (adress ==='Quảng Nam') {
+                    giamgia += 5;
+                }
+                if (renDays > 2) {
+                    giamgia += 10;
+                } else if (renDays > 4) {
+                    giamgia += 20;
+                } else if (renDays > 7) {
+                    giamgia += 30;
+                }
+                if (typeCustomer === 'Diamond'){
+                    giamgia += 15;
+                } else if (typeCustomer ==='Platium') {
+                    giamgia += 10;
+                } else  if (typeCustomer ==='Gold') {
+                    giamgia += 5;
+                } else if (typeCustomer ==='Silver') {
+                    giamgia += 2;
+                }
+                let totalPay = typeService*renDays-giamgia;
+                alert('Tổng tiền phải trả là: '+totalPay);
+                break;
+            }
+            default: {
+                alert('Bạn hãy chọn các chức năng có trong trình đơn');
+                break;
+            }
+        }
+
+</script>
 </body>
 </html>

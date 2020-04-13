@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h3>Caro Game Mini</h3>
+<p id="caroGame"></p>
+<button onclick="choi()" id="danhCo">Change Value</button>
+<script>
+    let a = [
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [0,0,0,0,0]
+    ]
+    let data =  '';
+    for (let i = 0; i < a.length; i++) {
+        data += '<br>'
+        for (let j = 0; j<a[i].length;j++) {
+            data += a[i][j] + '&nbsp;&nbsp';
+        }
+    }
+    let b = document.getElementById('caroGame').innerHTML = data;
+function choi() {
+    let x = prompt('X: ');
+    let y = prompt('Y: ');
+    data = '';
+    a[x][y] = 'x';
+    for (let i = 0; i < a.length; i++) {
+        data += '<br>'
+        for (let j = 0; j<a[i].length;j++) {
+            data += a[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp';
+        }
+    }
+    b = document.getElementById('caroGame').innerHTML = data;
+}
+
+</script>
 </body>
 </html>

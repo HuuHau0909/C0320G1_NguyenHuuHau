@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    let tong=0;
+    let num = parseInt(prompt('Nhập vào một số'));
+    while (num != -1) {
+        document.write('Số đã nhập: '+num + '<br>');
+        num = parseInt(prompt('Nhập vào một số: '));
+        tong += num;
+    }
+    document.write('Tổng các số là: ' + tong);
+
+</script>
 </body>
 </html>

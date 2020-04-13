@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="nhap">
+<button onclick="add()" id="add">Add</button>
+<button onclick="display()" id="disPlay">Display</button>
+<hr>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = [];
+    function add() {
+        array[x] = document.getElementById('nhap').value;
+        x++;
+        document.getElementById('nhap').value="";
+    }
+    function display() {
+        let e='';
+        for (let i = 0; i<array.length;i++) {
+            e += 'Element '+i+' = '+array[i] +"<br>";
+        }
+        document.getElementById('result').innerHTML = e;
+    }
+</script>
 </body>
 </html>
