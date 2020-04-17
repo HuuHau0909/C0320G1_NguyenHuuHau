@@ -10,7 +10,7 @@
     let cmnd = '201801111';
     let birthday = '9/9/1984';
     let email = 'huuhau99@gmail.com';
-    let adress = 'Quảng Nam';
+    let adress = 'Đà Nẵng';
     let typeCustomer = 'Platium';
     let discount = 10;
     let quantityInclued = 5;
@@ -237,12 +237,12 @@
                 } else if (adress ==='Quảng Nam') {
                     giamgia += 5;
                 }
-                if (renDays > 2) {
-                    giamgia += 10;
+                if (renDays > 7) {
+                    giamgia += 30;
                 } else if (renDays > 4) {
                     giamgia += 20;
-                } else if (renDays > 7) {
-                    giamgia += 30;
+                } else if (renDays > 2) {
+                    giamgia += 10;
                 }
                 if (typeCustomer === 'Diamond'){
                     giamgia += 15;

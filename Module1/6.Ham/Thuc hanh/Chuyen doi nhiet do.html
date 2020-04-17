@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Type a value in the Fahrenheit field to cover the value to Cenlcius</h3>
+<strong>Fahrenheit</strong> <input type="number" id="doF" oninput="change()" placeholder="Fahrenheit"
+"><br><br>
+<strong>Celcius:</strong> <span id="result"></span>
+<script>
+    function change() {
+    let doF =document.getElementById('doF').value;
+     result = (doF-32)/1.8;
+        document.getElementById('result').innerHTML = result;
+            }
+
+
+</script>
+</body>
+</html>
