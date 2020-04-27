@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid #d3d3d3;"></canvas>
+<script>
+    class Circle {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius
+        }
+    //
+    //     createCircle() {
+    //         let x = this.x;
+    //         let y = this.y;
+    //         let radius = this.radius;
+    //         let ctx = document.getElementById("myCanvas").getContext('2d');
+    //         ctx.beginPath();
+    //         ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    //         ctx.fill();
+    //     }
+    // }
+//Vẽ hình tròn kt cố định
+    // let circle = new Circle(500,500,80);
+    // circle.createCircle();
+
+// Vẽ hình tròn kt random
+//     let radius = Math.floor(Math.random()*150);
+//     let circle = new Circle(500,500,radius);
+//     circle.createCircle();
+    // Vẽ hình tròn với màu ngẫu nhiên
+    getRandomColor(){
+        let red = Math.floor(Math.random()*255);
+        let blue = Math.floor(Math.random()*255);
+        let green = Math.floor(Math.random()*255);
+        return 'rgb('+red+','+blue+','+green+')';
+
+    }
+    // createCircle() {
+    //     let x = this.x;
+    //     let y = this.y;
+    //     let radius = this.radius= Math.floor(Math.random()*150);
+    //     let color = this.getRandomColor();
+    //     let ctx = document.getElementById("myCanvas").getContext('2d');
+    //     ctx.beginPath();
+    //     ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    //     ctx.fillStyle = color;
+    //     ctx.fill();
+    // }
+    // }
+    // let radius = Math.floor(Math.random()*150);
+    // let circle = new Circle(500,500,radius);
+    // circle.createCircle();
+// Vẽ hình tròn với tất cả ngẫu nhiên
+    createCircle (){
+        let x = Math.random()*window.innerWidth;
+        let y = Math.random()*window.innerHeight;
+        let radius = Math.random()*150;
+        let color = this.getRandomColor();
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        ctx.beginPath();
+        ctx.arc(x,y,radius,0,2*Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+        }
+    createMultipcleCircle(){
+            for (let i=0;i<30;i++){
+                 this.createCircle();
+            }
+    }
+    }
+    let circle = new Circle()
+    circle.createMultipcleCircle();
+
+
+</script>
+</body>
+</html>

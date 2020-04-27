@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+
+<script>
+    class Hero {
+        constructor(image, top, down, left, right, width, height) {
+            this.image = image;
+            this.top = top;
+            this.down = down;
+            this.left = left;
+            this.right = right;
+            this.width = width;
+            this.height = height;
+        }
+
+        getHeroElements() {
+            return '<img width="' + this.width + '" height="' + this.height + '" src="' + this.image + '" ' +
+                'style="top: ' + this.top + 'px;left: ' + this.left + 'px;position: absolute">';
+        }
+
+        moveRight() {
+            this.left += 20;
+        }
+
+        moveLeft() {
+            this.right += 20;
+        }
+
+        moveTop() {
+            this.down += 20;
+        }
+
+        moveDown() {
+            this.top += 20;
+        }
+    }
+    let hero = new Hero('picachu.png',)
+</script>
+</body>
+</html>

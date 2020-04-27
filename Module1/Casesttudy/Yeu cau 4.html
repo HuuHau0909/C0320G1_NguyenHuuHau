@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNameCustomer = [];
+    while (true) {
+        let menu = parseInt(prompt('1.Thêm mới khách hàng' + '\n' + '2.Xóa tên khách hàng' + '\n' + '3.Hiển thị danh sách khách hàng'));
+        switch (menu) {
+            case 1: {
+                let quantityCustomer = parseInt(prompt('Nhập số lượng khách hàng cần thêm'));
+                if (!isNaN(quantityCustomer)){
+                    for (let i = 0; i < quantityCustomer; i++) {
+                        let newCustomer = prompt('Nhập tên khách hàng' + (i + 1));
+                        arrNameCustomer.push(newCustomer);
+                    }
+                } else {
+                    alert('Bạn đã nhập sai số lượng khách hàng');
+                }
+            }
+                break;
+            case 2: {
+                let checker = false
+                let deleteCustomer = prompt('Nhập tên khách hàng muốn xóa ')
+                for (let i = 0; i < arrNameCustomer.length; i++) {
+                    if (deleteCustomer == arrNameCustomer[i]) {
+                        arrNameCustomer.splice(i, 1);
+                        checker = true
+                    }
+                }
+                if (!checker) {
+                    alert('Tên bạn vừa nhập không có trong danh sách');
+                }
+                break;
+            }
+            case 3: {
+                arrNameCustomer.sort();
+                let result = '';
+                for (let i = 0; i < arrNameCustomer.length; i++) {
+                    result += (i + 1) + '.' + arrNameCustomer[i] + '\n';
+                }
+                alert(result)
+                break;
+            }
+            default: {
+                alert('Hãy nhập lại yêu cầu của bạn');
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

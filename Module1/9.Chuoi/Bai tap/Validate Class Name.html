@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkValidClassName(str) {
+        let regExp = /^[CAP][0-9]{4}[GHIKLM]{1}$/;
+        if (regExp.test(str)) {
+            alert(str +' Valid class name');
+        } else {
+            alert(str +' Invalid class name');
+        }
+    }
+    let str = prompt('Nhập vào tên lớp cần kiểm tra');
+    checkValidClassName(str);
+
+</script>
+</body>
+</html>

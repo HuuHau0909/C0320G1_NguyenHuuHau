@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Nhập vào độ C cần đổi</h4><br>
+<input type="number" id="doC"><br><br>
+<button onclick="change()">Change</button>
+<p id="result"></p>
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        changeToFarenheit() {
+            return this.celsius * 9 / 5 + 32;
+        }
+
+        changeToKelvin() {
+            return this.celsius + 273.15;
+        }
+    }
+
+    function change() {
+        let tem = parseFloat(document.getElementById('doC').value);
+        let temperature = new Temperature(tem);
+        result = "Độ F: " + temperature.changeToFarenheit() + ' Độ C: ' + temperature.changeToKelvin();
+        document.getElementById('result').innerHTML = result;
+
+    }
+</script>
+</body>
+</html>

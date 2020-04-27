@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function checkValidEmail(str) {
+    let pattern = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
+    // ^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$
+    if (pattern.test(str)) {
+        alert(str+' is Valid Email');
+    } else {
+        alert(str+' is not Valid Email');
+    }
+}
+let str1 = 'a@gmail.com';
+let str2 = 'ab@yahoo.com';
+let str3 = 'abcd@hotmail.com';
+let str4 = '@gmail.com';
+let str5 = 'ab@gmail.';
+let str6 = '@#abc@gmail.com';
+checkValidEmail(str6);
+
+</script>
+</body>
+</html>

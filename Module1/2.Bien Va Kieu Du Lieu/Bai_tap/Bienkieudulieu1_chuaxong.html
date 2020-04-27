@@ -21,13 +21,14 @@
         let diemhoa=document.getElementById("diemhoa");
         let diemsinh=document.getElementById("diemsinh");
         function myFuntion() {
-        let kq;
-        if diemly.value || diemhoa.value || diemsinh.value <0 {
+
+        if (diemly.value || diemhoa.value || diemsinh.value <0) {
             kq = "Bạn đã nhập sai, hãy nhập lại";
         }
             kq=(parseInt(diemly.value)+parseInt(diemhoa.value)+parseInt(diemsinh.value))/3;
-        }
             document.getElementById("kq").innerText=kq;
+        }
+
     </script>
 </form>
 

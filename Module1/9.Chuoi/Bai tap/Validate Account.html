@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkValidAccount(str) {
+        let regExp = /^[a-z_0-9]{6,}$/;
+        if (regExp.test(str)) {
+            alert(str + ' is valid account');
+        } else {
+            alert(str + ' is not valid account');
+        }
+    }
+    let str1 = '123abc_';
+    let str2 = '_abz123';
+    let str3 = '_______';
+    let str4 = '123456';
+    let str5 = 'abcdeg';
+    let str6 = '@';
+    let str7 = '12345';
+    let str8 = '1234_';
+    let str9 = 'abcdr';
+
+    checkValidAccount(str2)
+</script>
+</body>
+</html>
