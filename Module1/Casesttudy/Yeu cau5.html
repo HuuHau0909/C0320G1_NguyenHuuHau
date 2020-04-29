@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrListCustomer = [];
+
+    function displayMainMenu() {
+        let menu = parseInt(prompt('1.Add New Customer' + '\n' + '2.Display Infomation Custonmer' + '\n'
+            + '3.Edit Infomation Customer' + '\n' + '4.Delete Customer' + '\n' + '5.Exit'));
+        switch (menu) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayCustomers();
+                break;
+            }
+            case 3: {
+                editInfomationCustomers();
+                break;
+            }
+            case 4: {
+                deleteCustomer();
+                break;
+            }
+            case 5: {
+                alert('Exit Program!');
+                break;
+            }
+            default: {
+                alert('Wrong number!');
+                displayMainMenu();
+            }
+        }
+    }
+
+    displayMainMenu();
+
+    function addNewCustomer() {
+        let customerInfo = [];
+
+        let name = prompt("Input Name: ");
+        let cmnd = prompt("Input cmnd: ");
+        let birthday = prompt("Input birthday: ");
+        let email = prompt("Input email: ");
+        let adress = prompt("Input adress: ");
+        let typeCustomer = prompt("Input type customer: ");
+        let discount = prompt("Input discount: ");
+        let quantityInclued = prompt("Input quantity inclue: ");
+        let renDays = prompt("Input ren Days: ");
+        let typeService = prompt("Input type service: ");
+        let typeRoom = prompt("Input type room: ");
+        alert('Done!')
+
+        customerInfo.push(name);
+        customerInfo.push(cmnd);
+        customerInfo.push(birthday);
+        customerInfo.push(email);
+        customerInfo.push(adress);
+        customerInfo.push(typeCustomer);
+        customerInfo.push(discount);
+        customerInfo.push(quantityInclued);
+        customerInfo.push(renDays);
+        customerInfo.push(typeService);
+        customerInfo.push(typeRoom);
+
+        arrListCustomer.push(customerInfo);
+        alert(arrListCustomer);
+        displayMainMenu();
+    }
+
+    function displayCustomers() {
+        let customerName = prompt('Emter Customer name:');
+        let checkerCustomerName = false;
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            if (customerName === arrListCustomer[i][0]) {
+                alert('Name: ' + arrListCustomer[i][0] + '\n' +
+                    'CMND: ' + arrListCustomer[i][1] + '\n' +
+                    'Birthday: ' + arrListCustomer[i][2] + '\n' +
+                    'Email: ' + arrListCustomer[i][3] + '\n' +
+                    'Adress: ' + arrListCustomer[i][4] + '\n' +
+                    'Type Custommer: ' + arrListCustomer[i][5] + '\n' +
+                    'Discount: ' + arrListCustomer[i][6] + '\n' +
+                    'Quantity Inclued: ' + arrListCustomer[i][7] + '\n' +
+                    'Rendays: ' + arrListCustomer[i][8] + '\n' +
+                    'Type Service: ' + arrListCustomer[i][9] + '\n' +
+                    'Type Room: ' + arrListCustomer[i][10]);
+                checkerCustomerName = true;
+            }
+        }
+        if (!checkerCustomerName) {
+            alert('Name not in Customers list');
+        }
+        displayMainMenu();
+    }
+
+    function editInfomationCustomers() {
+        let editcustomerName = prompt('Emter Customer name:');
+        let checkerCustomerName = false;
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            if (editcustomerName === arrListCustomer[i][0]) {
+                let chinhsua = parseInt(prompt('Nhập mục thông tin cần chỉnh sửa' + '\n\n' +
+                    '1.Name: ' + arrListCustomer[i][0] + '\n' +
+                    '2.CMND: ' + arrListCustomer[i][1] + '\n' +
+                    '3.Birthday: ' + arrListCustomer[i][2] + '\n' +
+                    '4.Email: ' + arrListCustomer[i][3] + '\n' +
+                    '5.Adress: ' + arrListCustomer[i][4] + '\n' +
+                    '6.Type Custommer: ' + arrListCustomer[i][5] + '\n' +
+                    '7.Discount: ' + arrListCustomer[i][6] + '\n' +
+                    '8.Quantity Inclued: ' + arrListCustomer[i][7] + '\n' +
+                    '9.Rendays: ' + arrListCustomer[i][8] + '\n' +
+                    '10.Type Service: ' + arrListCustomer[i][9] + '\n' +
+                    '11.Type Room: ' + arrListCustomer[i][10]));
+                switch (chinhsua) {
+                    case 1: {
+                        arrListCustomer[i][0] = prompt('Name');
+                        alert('Name: ' + arrListCustomer[i][0]);
+                        break;
+                    }
+                    case 2: {
+                        arrListCustomer[i][1] = prompt('CMND');
+                        alert('CMND: ' + arrListCustomer[i][1]);
+                        break;
+                    }
+                    case 3: {
+                        arrListCustomer[i][2] = prompt('Birthday');
+                        alert('Birthday: ' + arrListCustomer[i][2]);
+                        break;
+                    }
+                    case 4: {
+                        arrListCustomer[i][3] = prompt('Email');
+                        alert('Email: ' + arrListCustomer[i][3])
+                        break;
+                    }
+                    case 5: {
+                        arrListCustomer[i][4] = prompt('Adress');
+                        alert('Adress: ' + arrListCustomer[i][4]);
+                        break;
+                    }
+                    case 6: {
+                        arrListCustomer[i][5] = prompt('Type Custommer');
+                        alert('Type Custommer: ' + arrListCustomer[i][5]);
+                        break;
+                    }
+                    case 7: {
+                        arrListCustomer[i][6] = prompt('Discount');
+                        alert('Discount: ' + arrListCustomer[i][6]);
+                        break;
+                    }
+                    case 8: {
+                        arrListCustomer[i][7] = prompt('Quantity Inclued');
+                        alert('Quantity Inclued: ' + arrListCustomer[i][7]);
+                        break;
+                    }
+                    case 9: {
+                        arrListCustomer[i][8] = prompt('Rendays');
+                        alert('Rendays: ' + arrListCustomer[i][8]);
+                        break;
+                    }
+                    case 10: {
+                        arrListCustomer[i][9] = prompt('Type Service');
+                        alert('Type Service: ' + arrListCustomer[i][9]);
+                        break;
+                    }
+                    case 11: {
+                        arrListCustomer[i][10] = prompt('Type Room');
+                        alert('Type Room: ' + arrListCustomer[i][10]);
+                        break;
+                    }
+                    default: {
+                        alert('Wrong Number');
+                    }
+                }
+                checkerCustomerName = true;
+            }
+        }
+        if (!checkerCustomerName) {
+            alert('Name not in Customers list');
+        }
+        displayMainMenu();
+    }
+
+    function deleteCustomer() {
+        let deletecustomerName = prompt('Emter Customer name:');
+        let checkerCustomerName = false;
+        for (let i = 0; i < arrListCustomer.length; i++) {
+
+                for (let j=0;j<arrListCustomer[i].length;j++){
+                    if (deletecustomerName === arrListCustomer[i][j]) {
+                arrListCustomer[i].splice(j,11);
+                alert(arrListCustomer);
+                        checkerCustomerName = true;
+            }}
+
+        }
+        if (!checkerCustomerName) {
+            alert('Name not in Customers list');
+        }
+        displayMainMenu();
+        //     let tempCustomer = '';
+        //     for (i = 0; i < arrListCustomer.length; i++) {
+        //         tempCustomer += (i + 1) + 'Name: ' + arrListCustomer[i][0] + '\n';
+        //     }
+        //     let chooseDelete = parseInt(prompt(tempCustomer));
+        //     let choosen = parseInt(prompt('Do you want delete customer' + '\n1.YES   2.NO'));
+        //
+        //     if (choosen === 1) {
+        //         arrListCustomer.splice(tempCustomer, 1);
+        //         alert('Deleted customer!');
+        //     } else {
+        //         alert('Cenceled');
+        //     }
+        //     displayMainMenu()
+    }
+
+</script>
+</body>
+</html>
