@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Employee.js"></script>
+</head>
+<body>
+<script>
+    let arrListEmployees = [];
+    let id;
+    let birthday;
+    let email;
+
+    function displayMainMenu() {
+        let menu = parseInt(prompt('1.Add New Employees' + '\n' + '2.Display Infomation Employees' + '\n'
+            + '3.Salary of Employees' + '\n' + '4.Exit'));
+        switch (menu) {
+            case 1: {
+                addNewEmployee();
+                break;
+            }
+            case 2: {
+                displayEmployee();
+                break;
+            }
+            case 3: {
+                displaySalary();
+                break;
+            }
+
+            case 4: {
+                alert('Exit Program!');
+                break;
+            }
+            default: {
+                alert('Wrong number!');
+                displayMainMenu();
+            }
+        }
+    }
+
+    displayMainMenu();
+
+    function addNewEmployee() {
+        let check = true;
+        let employee = new Employee();
+        let name = prompt("Input Name: ");
+        do {
+            let regExp = /^\d{9}$/;
+            id = prompt("Input Id: ");
+            if (regExp.test(id)) {
+                check = false;
+            } else {
+                alert('Invalided ID form!');
+            }
+        } while (check);
+        check = true;
+        do {
+            let regExp = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+            birthday = prompt("Input birthday: ");
+            if (regExp.test(birthday)) {
+                check = false;
+            } else {
+                alert('Invalided birthday form!')
+            }
+        } while (check)
+        check = true;
+        do {
+            let regExp = /^\d{10}$/;
+            phone = prompt("Input Phone number: ");
+            if (regExp.test(phone)) {
+                check = false;
+            } else {
+                alert('Invalided phone number form!');
+            }
+        } while (check);
+        check = true;
+        do {
+            let regExp = /\S+@\S+\.\S+/;
+            email = prompt("Input email: ");
+            if (regExp.test(email)) {
+                check = false;
+            } else {
+                alert('Invalided Email form!')
+            }
+        } while (check);
+        let level = prompt("Input level: ");
+        let position = prompt("Input position: ");
+
+        employee.setName(name);
+        employee.setId(id);
+        employee.setBirthday(birthday);
+        employee.setEmail(email);
+        employee.setPhone(phone);
+        employee.setLevel(level);
+        employee.setPosition(position);
+
+        arrListEmployees.push(employee);
+        alert('Done');
+        displayMainMenu();
+    }
+
+    function displayEmployee() {
+        let result = '';
+        for (let i = 0; i < arrListEmployees.length; i++) {
+            result += i + ' .Name: ' + arrListEmployees[i].getName() + '\n';
+        }
+        let choose = parseInt(prompt(result));
+        alert('Name: ' + arrListEmployees[choose].getName() + '\n'
+            + 'ID: ' + arrListEmployees[choose].getId() + '\n'
+            + 'Birthday: ' + arrListEmployees[choose].getBirthday() + '\n'
+            + 'Email: ' + arrListEmployees[choose].getEmail() + '\n'
+            + 'Phone: ' + arrListEmployees[choose].getPhone() + '\n'
+            + 'Level: ' + arrListEmployees[choose].getLevel() + '\n'
+            + 'Position: ' + arrListEmployees[choose].getPosition() + '\n'
+        );
+        displayMainMenu();
+    }
+
+    function displaySalary() {
+        let result = '';
+        for (let i = 0; i < arrListEmployees.length; i++) {
+            result += i + ' .Name: ' + arrListEmployees[i].getName() + '\n';
+        }
+        let choose = parseInt(prompt(result));
+        alert('Salary: ' + arrListEmployees[choose].getSalary());
+        displayMainMenu();
+
+    }
+</script>
+</body>
+</html>

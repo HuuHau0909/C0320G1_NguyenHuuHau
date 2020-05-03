@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Customer.js"></script>
+</head>
+<body>
+
+<script>
+    let arrListCustomer = [];
+    let cmnd;
+    let birthday;
+    let email;
+
+    function displayMainMenu() {
+        let menu = parseInt(prompt('1.Add New Customer' + '\n' + '2.Display Infomation Custonmer' + '\n'
+            + '3.Display total pay' + '\n' + '4.Edit Infomation Customer' + '\n' + '5.Delete Customer' + '\n' + '6.Exit'));
+        switch (menu) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            // case 2: {
+            //     displayCustomers();
+            //     break;
+            // }
+            case 3: {
+                displayTotalpay();
+                break;
+            }
+            // case 3: {
+            //     editInfomationCustomers();
+            //     break;
+            // }
+            // case 4: {
+            //     deleteCustomer();
+            //     break;
+            // }
+            // case 5: {
+            //     alert('Exit Program!');
+            //     break;
+            // }
+            default: {
+                alert('Wrong number!');
+                displayMainMenu();
+            }
+        }
+    }
+
+    displayMainMenu();
+
+    function addNewCustomer() {
+        let check = true;
+        let customer = new Customer();
+        let name = prompt("Input Name: ");
+        do {
+            let regExp = /^\d{9}$/;
+            cmnd = prompt("Input cmnd: ");
+            if (regExp.test(cmnd)) {
+                check = false;
+            } else {
+                alert('Invalided ID form!');
+            }
+        } while (check);
+        check = true;
+        do {
+            let regExp = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+            birthday = prompt("Input birthday: ");
+            if (regExp.test(birthday)) {
+                check = false;
+            } else {
+                alert('Invalided birthday form!')
+            }
+        } while (check)
+        check = true;
+        do {
+            let regExp = /\S+@\S+\.\S+/;
+            email = prompt("Input email: ");
+            if (regExp.test(email)) {
+                check = false;
+            } else {
+                alert('Invalided Email form!')
+            }
+        } while (check);
+
+
+        let adress = prompt("Input adress: ");
+        let typeCustomer = prompt("Input type customer: ");
+        let discount = prompt("Input discount: ");
+        let quantityInclued = prompt("Input quantity inclue: ");
+        let renDays = prompt("Input ren Days: ");
+        let typeService = prompt("Input type service: ");
+        let typeRoom = prompt("Input type room: ");
+        customer.setName(name);
+        customer.setCMND(cmnd);
+        customer.setBirthday(birthday);
+        customer.setEmail(email);
+        customer.setAdress(adress);
+        customer.settypeCustomer(typeCustomer);
+        customer.setdiscount(discount);
+        customer.setquantityInclue(quantityInclued);
+        customer.setrenDays(renDays);
+        customer.settypeService(typeService);
+        customer.settypeRoom(typeRoom);
+        arrListCustomer.push(customer);
+        alert('Done');
+        displayMainMenu();
+    }
+
+    function displayTotalpay() {
+
+        let tempCustomer = '';
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            tempCustomer += i + ' .Name: ' + arrListCustomer[i].getName() + '\n';
+        }
+        let chooseDisplay = parseInt(prompt(tempCustomer));
+        alert('Total pays: ' + arrListCustomer[chooseDisplay].totalPay())
+        displayMainMenu();
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inputWord">
+<input type="button" onclick="trans()" value="Translate">
+<!--<button onclick = "trans()" id="translated">Translate</button>-->
+<script>
+    let englishArr = ['Beautifull', 'Green', 'Flower', 'Car'];
+    let vietnameseArr = ['Xinh đẹp', 'Màu xanh', 'Hoa', 'Xe'];
+    let check = document.getElementById("inputWord");
+
+    function trans() {
+
+        let temp = true;
+        for (let i = 0; i < englishArr.length; i++) {
+            if (check.value == englishArr[i]) {
+                alert(vietnameseArr[i]);
+                temp = false;
+            }
+        }
+        if (temp){
+        alert('Not found!');
+    }
+    }
+</script>
+</body>
+</html>

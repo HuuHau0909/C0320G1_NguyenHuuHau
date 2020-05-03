@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Amount: <input type="text" id="amount">
+From Measurement: <select id="fromMeasurement">
+    <option>Feet</option>
+    <option>Met</option>
+</select>
+To Currency: <select id="toMeasurement">
+    <option>Feet</option>
+    <option>Met</option>
+</select>
+<button type="button" onclick="chuyenDoi()">Convert</button>
+<p id="changeMeasurement"></p>
+<script>
+    let amount = document.getElementById("amount");
+    let fromM = document.getElementById("fromMeasurement");
+    let toM = document.getElementById("toMeasurement");
+    function chuyenDoi() {
+        let changeMeasurement;
+        if (fromM.value === "Feet" && toM.value ==="Met") {
+            changeMeasurement = amount.value*3.279;
+        } else if (fromM.value === "Met" && toM.value ==="Feet") {
+            changeMeasurement = amount.value*0.305;
+        } else {
+            changeMeasurement = "Yêu cầu nhập tiền tệ cần đổi"
+        }
+        document.getElementById("changeMeasurement").innerText = changeMeasurement;
+    }
+</script>
+</body>
+</html>

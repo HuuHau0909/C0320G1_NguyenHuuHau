@@ -6,21 +6,12 @@
 </head>
 <body>
 <h3>Nhập vào số cần kiểm tra</h3>
-<input type="text" id="number"><br><br>
+<input type="text" id="inputNumber"><br><br>
 <button onclick="getValue()">Check Prime</button>
 
+
 <script>
-    function getValue() {
-        let number = parseInt(document.getElementById('number').value);
-        if (checkPrime()) {
-            document.write(number+'là số nguyên tố');
-        } else {
-            document.write(number+'không phải là số nguyên tố');
-        }
-
-    }
-    function checkPrime() {
-
+    function isPrime(number) {
         for (let i = 2; i <= Math.sqrt(number); i++) {
             if (number % i === 0) {
                 return false;
@@ -29,7 +20,18 @@
         return true;
     }
 
+    function getValue() {
+        let number = parseInt(document.getElementById('inputNumber').value);
 
-    </script>
+        if (isPrime(number)) {
+           alert(number + " là số nguyên tố");
+
+        } else {
+           alert(number + " Không phải là số nguyên tố");
+        }
+
+    }
+
+</script>
 </body>
 </html>
