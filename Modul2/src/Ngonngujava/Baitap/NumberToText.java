@@ -7,9 +7,7 @@ public class NumberToText {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number:");
         int number = Integer.parseInt(scanner.nextLine());
-        if (number < 0 && number > 999) {
-            System.out.print("Out off ability");
-        } else if (number <= 10 && number >= 0) {
+        if (number <= 10 && number >= 0) {
             switch (number) {
                 case 0: {
                     System.out.println("Zero");
@@ -139,7 +137,6 @@ public class NumberToText {
                     break;
                 }
             }
-
             switch (one) {
                 case 0: {
                     oneNum = "";
@@ -185,7 +182,7 @@ public class NumberToText {
             System.out.printf("%s %s", tensNum, oneNum);
         } else if (number >= 100 && number < 1000) {
             int hundred = (int) Math.floor(number / 100);
-            int tens = (int) Math.floor((number-hundred*100) / 10);
+            int tens = (int) Math.floor((number - hundred * 100) / 10);
             int one = number % 10;
             String hundredNum = "";
             String tensNum = "";
@@ -262,7 +259,6 @@ public class NumberToText {
                     break;
                 }
             }
-
             switch (one) {
                 case 0: {
                     oneNum = "";
@@ -306,6 +302,8 @@ public class NumberToText {
                 }
             }
             System.out.printf("%s and %s %s", hundredNum, tensNum, oneNum);
+        }else {
+            System.out.println("Out of ability");
         }
     }
 }
