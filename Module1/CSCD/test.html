@@ -5,32 +5,10 @@
     <title>Title</title>
 
 </head>
-<body>
-
-<form>
-    <p>
-        <label>Fahrenheit</label>
-        <input id="inputEnglish" type="text" placeholder="Enlish"
-               oninput="translateConverter(this.value)"
-               onchange="translateConverter(this.value)">
-    </p>
-    <p>Celsius: <span id="outputTranslate"></span></p>
-</form>
-
+<BODY>
 <script>
-    let englishArr = ['Beautifull', 'Green', 'Flower', 'Car'];
-    let vietnameseArr = ['Xinh đẹp', 'Màu xanh', 'Hoa', 'Xe'];
-    function translateConverter(valNum) {
-        for (let i = 0; i < englishArr.length; i++) {
-            if (valNum === englishArr[i]) {
-                alert(vietnameseArr[i]);
-            } else {
-                alert('NOt found!');
-            }
-        }
-        document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
-    }
-
+    let a = new Date()
+    alert(a.getDay());
 </script>
-</body>
+</BODY>
 </html>

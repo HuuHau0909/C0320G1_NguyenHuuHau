@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inputFruit">
+<button onclick="removeFruit()">Remove Fruit</button>
+<p id="result"></p>
+<script>
+    let arrFruit = ['Aple', 'Banana', 'Lemon'];
+    let remove = document.getElementById('inputFruit');
+    // let a = arrFruit.splice(1,1)
+    // alert(a)
+
+    function removeFruit() {
+
+        for (let i = 0; i < arrFruit.length; i++) {
+            if (remove.value === arrFruit[i]) {
+                arrFruit.splice(i, 1);
+                alert(arrFruit);
+            }
+        }
+    }
+
+    alert(arrFruit);
+</script>
+</body>
+</html>

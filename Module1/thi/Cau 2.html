@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="inputNumber">
+<button onclick="check()">Check Number</button>
+<script>
+    function check() {
+        let temp = 0;
+
+        let checkNum = parseInt(document.getElementById('inputNumber').value);
+        for (let i = 1; i <= checkNum / 2; i++) {
+            if (checkNum % i === 0) {
+                temp +=i;
+            }
+        }
+
+
+        if(temp === checkNum){
+            alert(checkNum + ' is perfect number!');
+        } else {
+            alert(checkNum + ' is not perfect number!');
+        }
+    }
+
+</script>
+</body>
+</html>
