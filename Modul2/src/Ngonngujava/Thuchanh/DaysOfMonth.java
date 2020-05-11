@@ -27,7 +27,7 @@ public class DaysOfMonth {
             case 2:
                 System.out.println("Nhập năm cần kiểm tra");
                         int year = scanner.nextInt();
-                        if (year % 4 ==0 && year % 100 ==0 && year % 400 ==0) {
+                        if ((year % 4 ==0 && year % 100 !=0)||(year % 100 ==0 && year % 400 ==0)) {
                             daysInMonth = "29 ngày";
                         } else {
                             daysInMonth = "28 ngày";
