@@ -17,7 +17,7 @@ public class SuDungLopArrayIndexOutOfBoundsException {
         int index = scanner.nextInt();
         try {
             System.out.println("Element at index "+ index +" is " + array[index]);
-        }catch (IndexOutOfBoundsException o){
+        }catch (IndexOutOfBoundsException e){
             System.err.println("Out off array lenght!");
         }
 
