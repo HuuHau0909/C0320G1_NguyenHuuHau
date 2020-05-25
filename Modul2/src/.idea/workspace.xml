@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3f7832e-1387-4321-8b1d-e865c7ec8b17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/BaiTap/Geometric/InterfaceResizeableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/BaiTap/Geometric/Resizeable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/AbstractInterfaceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Aple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Edible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/AnimalAndInterfaceEdible/Tiger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/ComparatorGeometric/CircleConparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AbstractAndInterface/ThucHanh/ComparatorGeometric/CircleConparatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Commons/FunctionFileCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Models/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Models/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Models/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/Models/Villa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructures/ThucHanh/MyLinkedlist/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructures/ThucHanh/Mylist/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStructures/ThucHanh/Mylist/MyListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Modul2/Inheritance/ThucHanh/Circle/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Modul2/Inheritance/ThucHanh/Circle/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Modul2/Inheritance/ThucHanh/Point/PointMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Modul2/Inheritance/ThucHanh/Point/PointMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inheritance/ThucHanh/Circle/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Inheritance/ThucHanh/Circle/Circle.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1cD7PzR6kzvMVqsMVTplzemkK4W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CaseStudy" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3f7832e-1387-4321-8b1d-e865c7ec8b17" name="Default Changelist" comment="" />
+      <created>1590051289285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590051289285</updated>
+      <workItem from="1590051291179" duration="94000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1590051382955">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590051382955" />
+  </component>
+</project>

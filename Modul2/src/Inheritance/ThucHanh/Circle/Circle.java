@@ -12,6 +12,12 @@ public class Circle {
         this.color = color;
     }
 
+    public Circle(String red, boolean b, double v) {
+    }
+
+    public Circle(int i) {
+    }
+
     public double getRadius() {
         return radius;
     }
