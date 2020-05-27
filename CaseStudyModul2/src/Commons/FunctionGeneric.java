@@ -1,13 +1,12 @@
 package Commons;
 
+import Models.Customer;
 import Models.House;
 import Models.Room;
 import Models.Villa;
 import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.sun.xml.internal.ws.message.StringHeader;
-import jdk.nashorn.internal.ir.IfNode;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -27,7 +26,7 @@ public class FunctionGeneric {
         EMPLOYEE
     }
 
-    public static <E> List<E> getListFromCSV(EntityType entityType){
+    public static <E> List <E> getListFromCSV(EntityType entityType){
         String csvPath = "";
         String[] headerRecord;
         switch (entityType) {
@@ -74,12 +73,12 @@ public class FunctionGeneric {
             case ROOM:
                 strategy.setType((Class<? extends E>) Room.class);
                 break;
-//            case CUSTOMER:
-//                strategy.setType((Class<? extends E>) Customer.class);
-//                break;
-//            case EMPLOYEE:
+            case CUSTOMER:
+                strategy.setType((Class<? extends E>) Customer.class);
+                break;
+            case EMPLOYEE:
 //                strategy.setType((Class<? extends E>) Employee.class);
-//                break;
+                break;
             default:
         }
         strategy.setColumnMapping(headerRecord);

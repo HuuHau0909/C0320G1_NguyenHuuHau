@@ -1,5 +1,6 @@
 package Commons;
 
+import Models.Customer;
 import Models.House;
 import Models.Room;
 import Models.Villa;
@@ -81,6 +82,25 @@ public class FunctinWriteAndReadFileCSV {
                 csvWriter.writeNext(new String[]{
                         room.getId(), room.getServiceName(), String.valueOf(room.getAreaUse()), String.valueOf(room.getRentalCosts()), String.valueOf(room.getMaxNumberOfPeople()),
                         room.getRentType(), room.getFreeServices()});
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void writeCustomerToFileCsv(List<Customer> list) {
+        try (
+                Writer writer = new FileWriter(PATH_CUSTOMER);
+                CSVWriter csvWriter = new CSVWriter(writer,
+                        CSVWriter.DEFAULT_SEPARATOR,
+                        CSVWriter.NO_QUOTE_CHARACTER,
+                        CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+                        CSVWriter.DEFAULT_LINE_END);) {
+            csvWriter.writeNext(FILE_HEADER_OF_CUSTOMER);
+            for (Customer customer : list) {
+                csvWriter.writeNext(new String[]{
+                        customer.getFullName(), customer.getBirthday(), customer.getGender(), String.valueOf(customer.getID()),
+                        customer.getphone(), customer.getEmail(), customer.getCustomerType(), customer.getAddress()});
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
