@@ -52,7 +52,7 @@ public class MainController {
                 System.exit(1);
                 break;
             default:
-                System.out.println("Invailed! Please press enter to try again!");
+                System.out.println("Invalided! Please press enter to try again!");
                 scanner.nextLine();
                 displayMainMenu();
         }
