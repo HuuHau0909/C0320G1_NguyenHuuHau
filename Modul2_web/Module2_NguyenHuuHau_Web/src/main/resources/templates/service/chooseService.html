@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<h2>Choose Service</h2>
+<p>
+    <a th:href="@{/service/serviceList}">
+        Back to list service
+    </a>
+</p>
+<div id="form">
+    <form>
+        <td>Name Service</td>
+        <button><a th:href="@{/service/createVilla}" style="color: darkblue; text-decoration: none">Villa</a></button>
+        <button><a th:href="@{/service/createHouse}" style="color: darkblue; text-decoration: none">House</a></button>
+        <button><a th:href="@{/service/createRoom}" style="color: darkblue; text-decoration: none">Room</a></button>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+
+</body>
+</html>

@@ -8,9 +8,9 @@ import java.util.List;
 
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer,Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-List<Customer> findAllByIsDeleteIsFalse();
+    List<Customer> findAllByIsDeleteIsFalse();
 
-Customer findByIsDeleteIsFalseAndIdIs(Long id);
+    Customer findByIsDeleteIsFalseAndIdIs(Long id);
 }

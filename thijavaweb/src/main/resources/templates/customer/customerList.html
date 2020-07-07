@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<a href="/" style="text-decoration: none"><h2>Home</h2></a>
+<form action="/customer">
+    <input type="text" name="search" class="form-group" placeholder="Search Name">
+    <input type="submit" value="Search">
+</form>
+<p>
+    <a th:href="@{/customer/create}">
+        Add new customer
+    </a>
+</p>
+
+<!--<p>-->
+<!--    <a th:href="@{/customer}">-->
+<!--        Find all-->
+<!--        <customer></customer>-->
+<!--    </a>-->
+<!--</p>-->
+<!--<p>-->
+<!--    <a th:href="@{/customer/usingService}">-->
+<!--        Find all customer using service-->
+<!--    </a>-->
+<!--</p>-->
+
+
+<!--<div class="notify">-->
+<!--    <div th:if="${message}">-->
+<!--        <span th:text="${message}" style="color: red"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<table id="customers">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Type Customer</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customer : ${customers}">
+        <td th:text="${customer.getIdCustomer()}"></td>
+        <td th:text="${customer.getNameCustomer()}"></td>
+        <td th:text="${customer.getGenderCustomer()}"></td>
+        <td th:text="${customer.getPhoneCustomer()}"></td>
+        <td th:text="${customer.getTypeCustomer()}"></td>
+        <td><a th:href="@{/customer/edit/{id}(id=${customer.getIdCustomer()})}">edit</a></td>
+        <td><a th:href="@{/customer/delete/{id}(id=${customer.getIdCustomer()})}">delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/customer'(page=${customers.number},search=${search})}"
+       th:if="${customers.hasPrevious()}">Back</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/customer'(page=${customers.number + 2},search=${search})}" th:if="${customers.hasNext()}">Next</a>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

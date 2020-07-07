@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
+
 @Repository
 @Transactional
 public class CustomerRepositoryImpl implements CustomerRepository {
@@ -35,10 +36,9 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
 
-
     @Override
     public void save(Customer model) {
-        if(model.getId() != null){
+        if (model.getId() != null) {
             em.merge(model);
         } else {
             em.persist(model);

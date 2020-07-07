@@ -1,8 +1,6 @@
 package com.haulaptrinh.testboot.models;
 
 
-
-
 public class Student {
     private int id;
     private String name;

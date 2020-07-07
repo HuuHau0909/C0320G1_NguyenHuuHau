@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+}
+#head-left {
+    background: blueviolet;
+    height: 100px;
+    width: 30%;
+    float: left;
+}
+
+#head-right {
+    background: blue;
+    height: 100px;
+    width: 70%;
+    float: left;
+}
+
+#head_link {
+    background: aquamarine;
+    height: 30px;
+    clear: both;
+    padding: 0px;
+float: ;
+}
+
+#left-banner {
+    background: cadetblue;
+    width: 20%;
+    height: 300px;
+
+    position: absolute;
+    left: 0px
+}
+
+#right-banner {
+    background: bisque right;
+    width: 20%;
+    height: 600px;
+    position: absolute;
+    right: 0px;
+
+}
+#hot-new{
+background-color: chocolate;
+    width: 30%;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+}
+
+#Photo-slide{
+    background-color: #3390d2;
+    width: 30%;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+}

@@ -25,16 +25,18 @@ public class StudentController {
 
     @GetMapping("/student/delete/{id}")
     public String deleteStudent(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
-        redirectAttributes.addFlashAttribute("message","Delete Successful!!!");
+        redirectAttributes.addFlashAttribute("message", "Delete Successful!!!");
         studentService.deleteStudent(id);
         return "redirect:/";
     }
+
     @GetMapping("/student/edit/{id}")
-    public ModelAndView getEditPage(@PathVariable Integer id){
-        return new ModelAndView("student/edit","student",studentService.findStudentById(id));
+    public ModelAndView getEditPage(@PathVariable Integer id) {
+        return new ModelAndView("student/edit", "student", studentService.findStudentById(id));
     }
+
     @PostMapping("/student/edit")
-    public String editStudent(Student student){
+    public String editStudent(Student student) {
         studentService.saveStudent(student);
         return "redirect:/";
     }

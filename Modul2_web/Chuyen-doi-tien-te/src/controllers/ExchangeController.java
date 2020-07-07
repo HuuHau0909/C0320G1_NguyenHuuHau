@@ -12,11 +12,12 @@ public class ExchangeController {
     public String show() {
         return "index";
     }
+
     @PostMapping("/index")
-    public String exchange(@RequestParam ("rate") double rate, @RequestParam("usd") double usd, Model model){
-        double vnd = rate*usd;
-        model.addAttribute("vnd",vnd);
-                return "exchange";
+    public String exchange(@RequestParam("rate") double rate, @RequestParam("usd") double usd, Model model) {
+        double vnd = rate * usd;
+        model.addAttribute("vnd", vnd);
+        return "exchange";
     }
 
 }

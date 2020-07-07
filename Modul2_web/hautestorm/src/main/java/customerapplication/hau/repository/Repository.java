@@ -1,6 +1,6 @@
 package customerapplication.hau.repository;
 
-        import java.util.List;
+import java.util.List;
 
 public interface Repository<T> {
     List<T> findAll();

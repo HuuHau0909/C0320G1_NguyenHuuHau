@@ -39,8 +39,8 @@ public class CustomerController {
     @PostMapping("/create")
     public String createNewCustomer(@Valid @ModelAttribute Customer customer,
                                     BindingResult bindingResult,
-                                    RedirectAttributes redirectAttributes
-                                   ) {
+                                    RedirectAttributes redirectAttributes) {
+        customer.validate(customer,bindingResult);
         if (bindingResult.hasErrors()) {
             return "customer/create";
         }

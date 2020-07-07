@@ -15,11 +15,10 @@ public class Province {
     private String nameProvince;
 
     @Column(name = "isDelete")
-    private Boolean isDelete=false;
+    private Boolean isDelete = false;
 
     @OneToMany(mappedBy = "province")
     private Set<Customer> customers;
-
 
 
     public Province() {

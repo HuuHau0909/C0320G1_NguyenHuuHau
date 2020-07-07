@@ -5,6 +5,7 @@ import java.util.List;
 
 public class UserDao {
     private static List<User> users;
+
     static {
         users = new ArrayList<>();
         User kh1 = new User();
@@ -15,7 +16,7 @@ public class UserDao {
         kh1.setPassword("123456");
         users.add(kh1);
 
-        User kh2 = new User("bill","123456","Bill","bill@codegym.vn",15);
+        User kh2 = new User("bill", "123456", "Bill", "bill@codegym.vn", 15);
         users.add(kh2);
 
         User kh3 = new User();
@@ -26,9 +27,10 @@ public class UserDao {
         kh3.setPassword("123456");
         users.add(kh3);
     }
-    public static User checkLogin(Login login){
-        for (User u:users){
-            if (u.getAccount().equals(login.getPassword())){
+
+    public static User checkLogin(Login login) {
+        for (User u : users) {
+            if (u.getAccount().equals(login.getPassword())) {
                 return u;
             }
         }

@@ -12,14 +12,16 @@
 </th:block>
 <table border="1">
     <tr>
+        <th>#</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Province</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    <th:block th:each="customer : ${customers}">
+    <th:block th:each="customer,iterStat : ${customers}">
         <tr>
+            <td th:text="${iterStat.count}"></td>
             <td th:text="${customer.firstName}"></td>
             <td th:text="${customer.lastName}"></td>
             <td th:text="${customer.province.nameProvince}"></td>

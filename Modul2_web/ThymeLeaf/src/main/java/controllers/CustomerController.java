@@ -1,9 +1,6 @@
 package controllers;
 
 
-
-
-
 import model.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,9 +20,10 @@ public class CustomerController {
         model.addAttribute("customers", customerService.findAll());
         return "index";
     }
+
     @PostMapping("/customer/save")
     public String save(Customer customer, RedirectAttributes redirect) {
-        customer.setId((int)(Math.random() * 10000));
+        customer.setId((int) (Math.random() * 10000));
         customerService.save(customer);
         redirect.addFlashAttribute("success", "Saved customer successfully!");
         return "redirect:/";

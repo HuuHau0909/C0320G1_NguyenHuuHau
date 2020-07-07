@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<h2>Add Customer</h2>
+<p>
+    <a th:href="@{/customer}">
+        Back to customer list
+    </a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}" style="color: red"></p>
+</th:block>
+<div id="form">
+    <form th:action="@{/customer/create}" th:object="${customer}" method="post">
+        <div>
+            <label>Id</label>
+            <input type="text" th:field="*{idCustomer}"/>
+            <p th:if="${#fields.hasErrors('idCustomer')}" th:errors="*{idCustomer}">Invalid name input</p>
+        </div>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{nameCustomer}"/>
+            <p th:if="${#fields.hasErrors('nameCustomer')}" th:errors="*{nameCustomer}">Invalid name input</p>
+        </div>
+        <td>Gender</td>
+        <td>
+            <select th:field="*{genderCustomer}">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </td>
+        <div>
+            <label>Birthday</label>
+            <input id="datepicker" type="text" th:field="*{birthdayCustomer}">
+            <p th:if="${#fields.hasErrors('birthdayCustomer')}" th:errors="*{birthdayCustomer}">Invalid birthday
+                input</p>
+        </div>
+        <div>
+            <label>CMND</label>
+            <input type="text" th:field="*{cmndCustomer}"/>
+            <p th:if="${#fields.hasErrors('cmndCustomer')}" th:errors="*{cmndCustomer}">Invalid CMND input</p>
+        </div>
+        <div>
+            <label>Phone</label>
+            <input type="text" th:field="*{phoneCustomer}"/>
+            <p th:if="${#fields.hasErrors('phoneCustomer')}" th:errors="*{phoneCustomer}">Invalid phone number input</p>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" th:field="*{emailCustomer}"/>
+            <p th:if="${#fields.hasErrors('emailCustomer')}" th:errors="*{emailCustomer}">Invalid email input</p>
+        </div>
+        <div>
+            <label>Address</label>
+            <input type="text" th:field="*{addressCustomer}"/>
+        </div>
+        <div>
+            <label>Type</label>
+            <input type="text" th:field="*{typeCustomer}"/>
+            <p th:if="${#fields.hasErrors('typeCustomer')}" th:errors="*{typeCustomer}">Invalid</p>
+        </div>
+        <input type="submit" value="Save"></input>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+<script>
+    // $( "#datepicker" ).datepicker({ dateFormat: 'dd/mm/yyyy' });
+    $('#datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+        uiLibrary: 'bootstrap4',
+        autoclose: true,
+        todayHighlight: true
+    });
+
+</script>
+</body>
+</html>

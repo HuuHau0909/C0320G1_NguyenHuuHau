@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ProvinceServince {
     List<Province> getAllProvince();
+
     void saveProvince(Province province);
 }

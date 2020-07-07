@@ -6,17 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "ConverterServlet",urlPatterns = "/convert")
+@WebServlet(name = "ConverterServlet", urlPatterns = "/convert")
 public class ConverterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-float rate = Float.parseFloat(request.getParameter("rate"));
-float usd = Float.parseFloat(request.getParameter("usd"));
-float vnd = usd*rate;
+        float rate = Float.parseFloat(request.getParameter("rate"));
+        float usd = Float.parseFloat(request.getParameter("usd"));
+        float vnd = usd * rate;
         PrintWriter printWriter = response.getWriter();
         printWriter.println("<html>");
-        printWriter.println("<h1>Rate: "+ rate +"</h1>");
-        printWriter.println("<h1>Rate: "+ usd +"</h1>");
-        printWriter.println("<h1>Rate: "+ vnd +"</h1>");
+        printWriter.println("<h1>Rate: " + rate + "</h1>");
+        printWriter.println("<h1>Rate: " + usd + "</h1>");
+        printWriter.println("<h1>Rate: " + vnd + "</h1>");
         printWriter.println("</html>");
 
     }

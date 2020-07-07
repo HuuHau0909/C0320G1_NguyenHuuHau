@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-@WebServlet(name = "ServerTimeServlet",urlPatterns = "/index")
+@WebServlet(name = "ServerTimeServlet", urlPatterns = "/index")
 public class ServerTimeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

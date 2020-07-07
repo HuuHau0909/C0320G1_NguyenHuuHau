@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProvinceRepository extends JpaRepository<Province,Long> {
+public interface ProvinceRepository extends JpaRepository<Province, Long> {
     List<Province> findAllByIsDeleteIsFalse();
 }

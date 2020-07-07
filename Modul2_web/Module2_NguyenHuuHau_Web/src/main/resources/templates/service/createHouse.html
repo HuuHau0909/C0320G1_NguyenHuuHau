@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<h2>Add Service</h2>
+<p>
+    <a th:href="@{/service/serviceList}" th:method="get">
+        Back to list service
+    </a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}" style="color: red"></p>
+</th:block>
+<div id="form">
+    <form th:action="@{/service/create}" th:object="${service}"
+          method="post">
+        <td>Name Service</td>
+        <td>
+            <select th:field="*{nameService}">
+                <option value="House">House</option>
+            </select>
+        </td>
+        <div>
+            <label>Area</label>
+            <input type="text" th:field="*{areaService}" placeholder="Area Service">
+        </div>
+        <div>
+            <label>Max people</label>
+            <input type="text" th:field="*{maxPeopleService}"/>
+        </div>
+        <div>
+            <label>Rent Cost</label>
+            <input type="text" th:field="*{rentCostService}"/>
+        </div>
+        <td>Type Rent</td>
+        <td>
+            <select th:field="*{typeRent.idTypeRent}">
+                <option th:each="typeRent : ${typeRents}" th:value="${typeRent.idTypeRent}"
+                        th:text="${typeRent.nameTypeRent}"></option>
+            </select>
+        </td>
+        </td>
+        <div>
+            <label>Service Standard</label>
+            <input type="text" th:field="*{standardService}"/>
+        </div>
+        <div>
+            <label>Number Floor</label>
+            <input type="text" th:field="*{numberFloorService}"/>
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+
+</body>
+</html>

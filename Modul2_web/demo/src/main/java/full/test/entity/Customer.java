@@ -17,14 +17,14 @@ public class Customer {
     @Column(name = "last_name")
     private String last_name;
 
-    @Column(name="is_delete")
+    @Column(name = "is_delete")
     private Long is_delete;
 
 //    @JoinColumn(name = "province_id")
 //       private Province province;
 
     @ManyToOne(targetEntity = Province.class)
-    @JoinColumn(name="province_id")
+    @JoinColumn(name = "province_id")
     private Province province;
 
     public Province getProvince() {

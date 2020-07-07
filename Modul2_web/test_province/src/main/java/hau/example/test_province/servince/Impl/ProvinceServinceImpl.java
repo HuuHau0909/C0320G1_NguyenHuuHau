@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProvinceServinceImpl  implements ProvinceServince {
+public class ProvinceServinceImpl implements ProvinceServince {
     @Autowired
     private ProvinceRepository provinceRepository;
 

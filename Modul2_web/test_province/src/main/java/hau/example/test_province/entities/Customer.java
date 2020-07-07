@@ -1,26 +1,28 @@
 package hau.example.test_province.entities;
 
 
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "customer")
-public class Customer {
+public class Customer implements Validator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "First Name not blank")
-    @Size(min = 2,max = 8,message = "min 0 and max 8")
+    @Size(min = 2, max = 8, message = "min 0 and max 8")
     @Column(name = "first_name")
     private String firstName;
 
-    @NotBlank(message = "First Name not blank")
-    @Size(min = 2,max = 10,message = "min 0 and max 10")
+
     @Column(name = "last_Name")
     private String lastName;
 
@@ -72,5 +74,22 @@ public class Customer {
 
     public void setProvince(Province province) {
         this.province = province;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return Customer.class.equals(clazz);
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        Customer customer = (Customer) target;
+        String firstName = customer.getFirstName();
+        if (firstName==null){
+            errors.rejectValue("firstName","customer.firstname.empty");
+        }
+//       else if(firstName.length()<2||firstName.length()>10){
+//            errors.rejectValue();
+//        }
     }
 }

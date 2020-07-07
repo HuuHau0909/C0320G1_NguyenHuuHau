@@ -31,9 +31,9 @@ public class ProvinceController {
     }
 
     @PostMapping("/create")
-    public ModelAndView createProvince(@ModelAttribute Province province){
+    public ModelAndView createProvince(@ModelAttribute Province province) {
         provinceServince.saveProvince(province);
-        ModelAndView modelAndView=new ModelAndView("province/create","message","Save successfully!");
+        ModelAndView modelAndView = new ModelAndView("province/create", "message", "Save successfully!");
         modelAndView.addObject("province", new Province());
         return modelAndView;
     }
