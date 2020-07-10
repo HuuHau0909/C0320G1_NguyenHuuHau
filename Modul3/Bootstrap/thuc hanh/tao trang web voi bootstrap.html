@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="poly.css">
+    <title>Layout</title>
+</head>
+<body>
+<div class="container" style = "height: auto">
+    <header class="row">
+        <div class = "shopping-mall">
+                    <h1>Online shopping mall</h1>
+                    <h5>The center point of the professional programming</h5>
+                </div>
+        <img style="width: 300px;height: 200px" class = "pull-right" src="4.jpg"/>
+    </header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<!--                    <span class="sr-only">Toggle navigation</span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="icon-bar"></span>-->
+<!--                    <span class="glyphicon glyphicon-home"></span> Trang chủ-->
+<!--                    <span class="glyphicon glyphicon-list-alt"></span> Giới thiệu-->
+<!--                    <span class="glyphicon glyphicon-earphone"></span> Liên hệ-->
+<!--                    <span class="glyphicon glyphicon-envelope"></span> Góp ý-->
+<!--                    <span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp-->
+<!--                    <span class="glyphicon glyphicon-user"></span> Tài khoản-->
+                </button>
+                <a class="navbar-brand" href="#">Trang chủ</a>
+                <span class="glyphicon glyphicon-home"></span>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Giới thiệu <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <div class = "row">
+        <article class="col-sm-9">
+
+        </article>
+        <aside class="col-sm-3">
+
+        </aside>
+    </div>
+    <footer class="panel panel-default">
+        <div class = "panel-heading text-center">
+            <p>CodeGym &copy; 2017</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
+<!--Bước 2: Thiết kế header-->
+
+<!--Thêm phần mã sau vào <header>-->
+
+<!--    <div class = "shopping-mall">-->
+<!--        <h1>Online shopping mall</h1>-->
+<!--        <h5>The center point of the professional programming</h5>-->
+<!--    </div>-->
+<!--    <img class = "pull-right" src="images/header-object.png"/>-->
+<!--    Bước 3: Thiết kế header-->
+
+<!--    Chọn hình có kích thước phù hợp và đẩy sang  phải với class là .pull-right đã được định nghĩa trong bootstrap-->
+
+<!--    Định dạng cho class .shopping-mall bằng cách bổ sung vào poly.css mã như sau:-->
+
+<!--    header {-->
+<!--    position: relative;-->
+<!--    }-->
+<!--    .shopping-mall{-->
+<!--    position: absolute;-->
+<!--    bottom: 20px;-->
+<!--    font-variant: small-caps;-->
+<!--    }-->
+<!--    .shopping-mall>h1{-->
+<!--    font-family: Impact;-->
+<!--    font-size: 50px;-->
+<!--    color: white;-->
+<!--    letter-spacing: 0.3px;-->
+<!--    text-shadow: 0 0 2px black;-->
+<!--    padding-bottom: 0px;-->
+<!--    border-bottom: 1px dotted gray;-->
+<!--    margin: 0px;-->
+<!--    }-->
+<!--    .shopping-mall>h5{-->
+<!--    margin-top: 5px;-->
+<!--    letter-spacing: 0.5px;-->
+<!--    }-->

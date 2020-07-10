@@ -1,6 +1,8 @@
-*{
+* {
     margin: 0px;
 }
+
+
 #head-left {
     background: blueviolet;
     height: 100px;
@@ -11,25 +13,42 @@
 #head-right {
     background: blue;
     height: 100px;
-    width: 70%;
+    width: 60%;
     float: left;
 }
 
 #head_link {
+    /*position: relative;*/
     background: aquamarine;
-    height: 30px;
+    height: 50px;
     clear: both;
-    padding: 0px;
-float: ;
+
+}
+#head_link a {
+
+float: left;
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+#search {
+    position: absolute;
+    right: 0px;
+    /*top:  ;*/
+    float: right;
 }
 
 #left-banner {
+
     background: cadetblue;
     width: 20%;
     height: 300px;
 
     position: absolute;
     left: 0px
+
 }
 
 #right-banner {
@@ -40,18 +59,73 @@ float: ;
     right: 0px;
 
 }
-#hot-new{
-background-color: chocolate;
+
+#hot-new {
+    clear: both;
+    background-color: chocolate;
     width: 30%;
     height: 200px;
     position: absolute;
     left: 20%;
 }
 
-#Photo-slide{
+#Photo-slide {
     background-color: #3390d2;
     width: 30%;
     height: 200px;
     position: absolute;
     left: 50%;
+}
+
+#new1 {
+    background-color: #9f61d2;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 350px;
+}
+#new2 {
+    background-color: #d22db2;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+    top: 350px;
+}
+
+#new3 {
+    background-color: #d21f7b;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 60%;
+    top: 350px;
+}
+
+#new4 {
+    background-color: #d21f7b;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 20%;
+    top: 550px;
+}
+
+#new5 {
+    background-color: #d21f7b;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    top: 550px;
+}
+
+#new6 {
+    background-color: #b8d238;
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    left: 60%;
+    top: 550px;
 }
