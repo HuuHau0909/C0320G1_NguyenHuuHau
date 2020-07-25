@@ -1,0 +1,28 @@
+<p>student-list </p>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Batch</th>
+    <th>Mark</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.address}}</td>
+    <td>{{student.batch}}</td>
+    <td>{{student.mark}}</td>
+    <td>
+      <button (click)="viewDetail(student)">Detail</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!--<h3>Student Detail</h3>-->
+<app-student-detail [studentDetail]="studentDetailOutputDl"></app-student-detail>

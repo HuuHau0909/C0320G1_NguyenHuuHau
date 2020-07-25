@@ -1,0 +1,56 @@
+<div class="row justify-content-between">
+  <h2>Service List</h2>
+  <div class="d-flex">
+    <input type="text" class="form-control mr-2" style="width: 400px" placeholder="Search service" [(ngModel)]="term">
+    <button type="button" class="btn btn-primary">Search</button>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <button class="btn btn-success" routerLink="/service-add">Add Service</button>
+  <table class="table mt-3 table-striped" style="font-size: 12px">
+    <thead>
+    <tr style="text-align: center;">
+      <th>Mã Dịch Vụ</th>
+      <th>Tên Dịch Vụ</th>
+      <th>Diện Tích</th>
+      <th>Số Tầng</th>
+      <th>Số Người Tối Đa</th>
+      <th>Tiêu chuẩn phòng</th>
+      <th>Kiểu Thuê</th>
+      <th>Giá</th>
+      <th>Dịch vụ đi kèm</th>
+      <th>Diện tích hồ bơi</th>
+      <th>DV Miễn phí</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+      *ngFor="let service of services |filter : search |paginate: { itemsPerPage: 2, currentPage: page,totalItems:totalRec,id:'listing_pagination' } ;let i  = index">
+      <td>{{service.code}}</td>
+      <td>{{service.nameService}}</td>
+      <td>{{service.area}} m2</td>
+      <td>{{service.numFlor}}</td>
+      <td>{{service.maxPeople}} Người</td>
+      <td>{{service.standard}}</td>
+      <td>{{service.typeRent}} Triệu</td>
+      <td>{{service.rentCost}}</td>
+      <td>{{service.serviceInclude}}</td>
+      <td>{{service.poolArea}}</td>
+      <td>{{service.freeInclude}}</td>
+      <td width="200">
+        <button class="btn btn-success ml-3" [routerLink]="['/services',service.id,'edit']">Edit</button>
+        <button class="btn btn-danger ml-3" (click)="onDeleteService(service.id)">Delete</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls id="listing_pagination" (pageChange)="page = $event" previousLabel="previous"
+                       nextLabel="next"></pagination-controls>
+</div>
+
+<div class="text-danger">
+  {{message}}
+</div>

@@ -1,0 +1,94 @@
+<h3 class="text-center" style="color: #30bcff">Thêm mới dịch vụ</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formAddNewService">
+  <div>
+    <p>Mã hợp đồng</p>
+    <input type="text" class="form-control" formControlName="code">
+    <p *ngIf="formAddNewService.controls.code.errors?.required &&formAddNewService.controls.code.touched"
+       class="text-danger">Vui lòng nhập mã hợp đông</p>
+        <p *ngIf="formAddNewService.controls.code.errors?.pattern && formAddNewService.controls.code.touched"
+           class="text-danger">Mã dịch vụ không đúng định dạng DV-XXXX</p>
+  </div>
+
+  <div class="form-group">
+    <p>Tên dịch vụ</p>
+    <input type="text" class="form-control" formControlName="nameService">
+    <p *ngIf="formAddNewService.controls.nameService.errors?.required && formAddNewService.controls.nameService.touched"
+       class="text-danger">Vui lòng nhập tên dịch vụ</p>
+  </div>
+
+  <div class="form-group">
+    <p>Diện tích</p>
+    <input type="text" class="form-control" formControlName="area">
+    <p
+      *ngIf="formAddNewService.controls.area.errors?.required && formAddNewService.controls.area.touched"
+      class="text-danger">Vui lòng nhập diẹn tích</p>
+  </div>
+
+  <div class="form-group">
+    <p>Giá thuê</p>
+    <input type="text" class="form-control" formControlName="rentCost">
+    <p *ngIf="formAddNewService.controls.rentCost.errors?.required && formAddNewService.controls.rentCost.touched"
+       class="text-danger">Vui lòng nhập Giá thuê</p>
+  </div>
+
+  <div class="Số người">
+    <p>Số người</p>
+    <input type="text" class="form-control" formControlName="maxPeople">
+    <p *ngIf="formAddNewService.controls.maxPeople.errors?.required && formAddNewService.controls.maxPeople.touched"
+       class="text-danger">Vui lòng nhập số người</p>
+        <p *ngIf="formAddNewService.controls.maxPeople.errors?.pattern && formAddNewService.controls.maxPeople.touched"
+           class="text-danger">Số người phải là số nguyên dương</p>
+  </div>
+
+  <div class="form-group">
+    <p>Kiểu thuê</p>
+    <input type="text" class="form-control" formControlName="typeRent">
+    <p *ngIf="formAddNewService.controls.typeRent.errors?.required && formAddNewService.controls.typeRent.touched"
+       class="text-danger">Vui lòng nhập Kiểu thuê</p>
+  </div>
+
+  <div class="form-group">
+    <p>Tiêu chuẩn phòng</p>
+    <input type="text" class="form-control" formControlName="standard">
+    <p *ngIf="formAddNewService.controls.standard.errors?.required && formAddNewService.controls.standard.touched"
+       class="text-danger">Vui lòng nhập Tiêu chuẩn phòng</p>
+  </div>
+
+  <div class="form-group">
+    <p>Dịch vụ đi kèm</p>
+    <input type="text" class="form-control" formControlName="serviceInclude">
+    <p *ngIf="formAddNewService.controls.serviceInclude.errors?.required && formAddNewService.controls.serviceInclude.touched"
+       class="text-danger">Vui lòng nhập Dịch vụ đi kèm</p>
+  </div>
+
+  <div class="form-group">
+    <p>Diện tích hồ bơi</p>
+    <input type="text" class="form-control" formControlName="poolArea">
+    <p *ngIf="formAddNewService.controls.poolArea.errors?.required && formAddNewService.controls.poolArea.touched"
+       class="text-danger">Vui lòng nhập Diện tích hồ bơi</p>
+  </div>
+
+  <div class="form-group">
+    <p>Số tầng</p>
+    <input type="text" class="form-control" formControlName="numFlor">
+    <p *ngIf="formAddNewService.controls.numFlor.errors?.required && formAddNewService.controls.numFlor.touched"
+       class="text-danger">Vui lòng nhập Số tầng</p>
+    <p *ngIf="formAddNewService.controls.numFlor.errors?.pattern && formAddNewService.controls.numFlor.touched"
+       class="text-danger">Số tầng phải là số nguyên dương</p>
+  </div>
+
+  <div class="form-group">
+    <p>Dv miễn phí</p>
+    <input type="text" class="form-control" formControlName="freeInclude">
+    <p *ngIf="formAddNewService.controls.freeInclude.errors?.required && formAddNewService.controls.freeInclude.touched"
+       class="text-danger">Vui lòng nhập Dv miễn phí</p>
+  </div>
+
+  <div class="form-group d-flex justify-content-center">
+    <button [disabled] = "formAddNewService.invalid" class="btn btn-success mt-3" (click)="createService()">Thêm mới
+    </button>
+  </div>
+</form>
+
+

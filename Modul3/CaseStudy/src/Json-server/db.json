@@ -1,0 +1,216 @@
+{
+  "nhanvien": [
+    {
+      "fullName": "Nguyễn Văn Khoa 234",
+      "position": "Nhân Viên",
+      "academicLevel": "Đại Học",
+      "part": "Kinh Doanh",
+      "dateOfBirth": "1990-07-03T17:00:00.000Z",
+      "IDnumber": "201647394",
+      "salary": "12",
+      "email": "dinhkhoa@gmail.com",
+      "phone": "0913123123",
+      "address": "Đà Nẵng",
+      "id": 1
+    },
+    {
+      "fullName": "Trần Văn Long",
+      "position": "Bảo vệ",
+      "academicLevel": "Đại Học",
+      "part": "Bảo vệ",
+      "dateOfBirth": "1990-06-06T17:00:00.000Z",
+      "IDnumber": "123123123",
+      "salary": "1000",
+      "email": "long@example.com",
+      "phone": "0912123123",
+      "address": "Đà Nẵng",
+      "id": 3
+    },
+    {
+      "fullName": "Trần Văn Quyền",
+      "position": "Lễ Tân",
+      "academicLevel": "Trung cấp",
+      "part": "Nhân viên",
+      "dateOfBirth": "2020-06-23T17:00:00.000Z",
+      "IDnumber": "202876543",
+      "salary": "4",
+      "email": "quyen@gmail.com",
+      "phone": "0905678354",
+      "address": "Tam Kỳ",
+      "id": 7
+    }
+  ],
+  "customers": [
+    {
+      "fullName": "Nguyễn Đình Hòa12",
+      "gender": "Nam",
+      "dateOfBirth": "1991-02-27T17:00:00.000Z",
+      "IDnumber": "221331331",
+      "email": "dinhhoa@gmail.com",
+      "phone": "0901224445",
+      "address": "Ngũ Hành Sơn - Đà Nẵng",
+      "typeCustomer": "Platinum",
+      "id": 1
+    },
+    {
+      "fullName": "Hải Sản Bà Rô",
+      "gender": "Nam",
+      "dateOfBirth": "1990-08-08T17:00:00.000Z",
+      "IDnumber": "222222222",
+      "email": "dinhhoa@gmail.com",
+      "phone": "0902222222",
+      "address": "Đà Nẵng",
+      "typeCustomer": "Silver",
+      "id": 3
+    },
+    {
+      "fullName": "Hải Sản Năm Đảnh",
+      "gender": "Nam",
+      "dateOfBirth": "1990-06-05T17:00:00.000Z",
+      "IDnumber": "221331331",
+      "email": "dinhhoa@gmail.com",
+      "phone": "0901224449",
+      "address": "Trần Quang Khải",
+      "typeCustomer": "Silver",
+      "id": 4
+    },
+    {
+      "fullName": "Đình Hòa",
+      "gender": "Nam",
+      "dateOfBirth": "1990-06-04T17:00:00.000Z",
+      "IDnumber": "123123123",
+      "email": "123123123@example.com",
+      "phone": "0902312312",
+      "address": "123123123",
+      "typeCustomer": "Silver",
+      "id": 14
+    },
+    {
+      "fullName": "Hồ Thị Thảo",
+      "gender": "Nữ",
+      "dateOfBirth": "1992-06-16T17:00:00.000Z",
+      "IDnumber": "234234234",
+      "email": "thao@gmail.com",
+      "phone": "0905098765",
+      "address": "Đà Nẵng",
+      "typeCustomer": "Platinum",
+      "id": 16
+    },
+    {
+      "fullName": "sdfgsf",
+      "gender": "Nữ",
+      "dateOfBirth": "1990-07-03T17:00:00.000Z",
+      "IDnumber": "123123123",
+      "email": "sdf@sd.dfg",
+      "phone": "0905432123",
+      "address": "ádfad",
+      "typeCustomer": "Diamond",
+      "id": 18
+    }
+  ],
+  "contracts": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "services": [
+    {
+      "code": "DV-001",
+      "nameService": "Villa",
+      "area": "120",
+      "rentCost": "550",
+      "maxPeople": "6",
+      "typeRent": "month",
+      "standard": "Vip",
+      "serviceInclude": "typicode",
+      "poolArea": "60",
+      "numFlor": "2",
+      "freeInclude": "water",
+      "id": "1"
+    },
+    {
+      "code": "DV-002",
+      "nameService": "House",
+      "area": "90",
+      "rentCost": "350",
+      "maxPeople": "6",
+      "typeRent": "month",
+      "standard": "Vip",
+      "serviceInclude": "typicode",
+      "poolArea": "60",
+      "numFlor": "2",
+      "freeInclude": "water",
+      "id": "2"
+    },
+    {
+      "code": "DV-003",
+      "nameService": "Room",
+      "area": "60",
+      "rentCost": "150",
+      "maxPeople": "6",
+      "typeRent": "month",
+      "standard": "Vip",
+      "serviceInclude": "typicode",
+      "poolArea": "60",
+      "numFlor": "2",
+      "freeInclude": "water",
+      "id": "3"
+    },
+    {
+      "code": "",
+      "nameService": "",
+      "area": "",
+      "rentCost": "",
+      "maxPeople": "",
+      "typeRent": "",
+      "standard": "",
+      "serviceInclude": "",
+      "poolArea": "",
+      "numFlor": "",
+      "freeInclude": "",
+      "id": "4"
+    },
+    {
+      "code": "",
+      "nameService": "",
+      "area": "",
+      "rentCost": "",
+      "maxPeople": "",
+      "typeRent": "",
+      "standard": "",
+      "serviceInclude": "",
+      "poolArea": "",
+      "numFlor": "",
+      "freeInclude": "",
+      "id": "5"
+    },
+    {
+      "code": "DV-0004",
+      "nameService": "Villa",
+      "area": "150",
+      "rentCost": "234",
+      "maxPeople": "3",
+      "typeRent": "day",
+      "standard": "vip",
+      "serviceInclude": "asdfjl",
+      "poolArea": "123",
+      "numFlor": "3",
+      "freeInclude": "asdf",
+      "id": "6"
+    },
+    {
+      "code": "DV-0008",
+      "nameService": "room",
+      "area": "1234",
+      "rentCost": "124",
+      "maxPeople": "4",
+      "typeRent": "month",
+      "standard": "ádf",
+      "serviceInclude": "fdas",
+      "poolArea": "321",
+      "numFlor": "4",
+      "freeInclude": "ádfsasd",
+      "id": "O0q6sf-"
+    }
+  ]
+}
